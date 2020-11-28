@@ -105,7 +105,7 @@ async function createWidget() {
 	convertedRawMatchDate.setHours(convertedRawMatchDate.getHours()+1)
 	let newDateFormatter = new DateFormatter()
 	newDateFormatter.locale = 'de_DE'
-	newDateFormatter.dateFormat = 'EEEE, d.M.y\n H:m\' Uhr\''
+	newDateFormatter.dateFormat = 'EEEE, d.M.y\n H:mm\' Uhr\''
 	
 	let newDateString = newDateFormatter.string(convertedRawMatchDate)
 	
@@ -235,7 +235,7 @@ async function createWidget() {
     	let aDateInfo = analasysStack.addText('Zeitraum: '+dateFrom+' bis '+dateTo)
     	aDateInfo.font = Font.lightMonospacedSystemFont(8)
     
-    	let jData = analasysStack.addText('\nLetzte Ergebnisse: \nWir: '+myTeamResults.toString()+'\nDie: '+enemyTeamResults.toString()+'\n\nØ Punkte:\nWir: '+((myTeamPoints/playedMatchesMyTeamData.count).toFixed(2))+'\nDie: '+(enemyTeamPoints/playedMatchesEnemyTeamData.count)+'\n\nForm:\nWir: '+myTeamFormPoints+'\nDie: '+enemyTeamFormPoints)
+    	let jData = analasysStack.addText('\nLetzte Ergebnisse: \nWir: '+myTeamResults.toString()+'\nDie: '+enemyTeamResults.toString()+'\n\nØ Punkte:\nWir: '+((myTeamPoints/playedMatchesMyTeamData.count).toFixed(2))+'\nDie: '+(enemyTeamPoints/playedMatchesEnemyTeamData.count).toFixed(2)+'\n\nForm:\nWir: '+myTeamFormPoints+'\nDie: '+enemyTeamFormPoints)
     	jData.font = Font.lightMonospacedSystemFont(9)
 	}
 
